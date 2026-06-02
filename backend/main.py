@@ -12,7 +12,8 @@ async def lifespan(app: FastAPI):
     # Shutdown
     mongodb.disconnect()
 
-app = FastAPI(title="Chronos API", version="1.0.0", lifespan=lifespan)
+# Modifica esta línea en tu main.py
+app = FastAPI(title="Chronos API", version="1.0.0", lifespan=lifespan, redirect_slashes=False)
 
 # Configurar CORS de forma segura
 origins = [
