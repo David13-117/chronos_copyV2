@@ -19,6 +19,7 @@ origins = [
     "http://localhost:5173",          # Tu Vue.js en local (PC)
     "http://127.0.0.1:5173",          # Alternativa local
     "https://chronos-copy-v2.vercel.app" # <-- ¡Tu URL real de Vercel!
+    "https://chronos-copy-v2.vercel.app/"
 ]
 
 app.add_middleware(
