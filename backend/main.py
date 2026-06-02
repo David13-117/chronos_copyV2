@@ -14,10 +14,16 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Chronos API", version="1.0.0", lifespan=lifespan)
 
-# Configurar CORS
+# Configurar CORS de forma segura
+origins = [
+    "http://localhost:5173",          # Tu Vue.js en local (PC)
+    "http://127.0.0.1:5173",          # Alternativa local
+    "https://chronos-copy-v2.vercel.app" # <-- ¡Tu URL real de Vercel!
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Temporal: permitir todos los orígenes
+    allow_origins=origins,            # <-- Cambiamos el ["*"] por la lista explícita
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
