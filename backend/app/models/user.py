@@ -24,7 +24,7 @@ class UserLogin(BaseModel):
 
 class UserResponse(UserBase):
     id: Optional[str] = None
-    created_at: datetime
+    created_at: date
     is_active: bool = True
     birth_date: Optional[date] = None
     location: Optional[str] = None
