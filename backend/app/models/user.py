@@ -1,7 +1,7 @@
 #estructura de datos para los usuarios
 
 from pydantic import BaseModel, EmailStr, Field, field_validator
-from datetime import date
+from datetime import date, datetime
 from typing import Optional
 from bson import ObjectId
 
